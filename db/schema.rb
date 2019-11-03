@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_30_141527) do
+ActiveRecord::Schema.define(version: 2019_11_03_183412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2019_10_30_141527) do
     t.string "end_time"
     t.string "description"
     t.integer "host_id"
-    t.integer "volunteer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -32,6 +31,13 @@ ActiveRecord::Schema.define(version: 2019_10_30_141527) do
     t.string "name"
     t.string "image"
     t.string "bio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "volunteer_events", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "volunteer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
