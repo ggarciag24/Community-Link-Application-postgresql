@@ -10,15 +10,16 @@ class EventsController < ApplicationController
     name = params['name']
     focus = params['focus']
     location = params['location']
+    date = params['date']
     start_time = params['start_time']
     end_time = params['end_time']
     description = params['description']
     host_id = params['host_id']
 
-    newEvent = Event.create({name: name, focus: focus, location: location, start_time: start_time, end_time: end_time, description: description, host_id: host_id})
+    newEvent = Event.create({name: name, focus: focus, location: location, date: date, start_time: start_time, end_time: end_time, description: description, host_id: host_id})
     render json: newEvent
   end
 
-  
+
 
 end
