@@ -6,6 +6,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :focus
       t.string :start_time
       t.string :end_time
+      t.string :date
       t.string :description
       t.integer :host_id
 

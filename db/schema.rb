@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_11_03_183412) do
     t.string "focus"
     t.string "start_time"
     t.string "end_time"
+    t.string "date"
     t.string "description"
     t.integer "host_id"
     t.datetime "created_at", precision: 6, null: false

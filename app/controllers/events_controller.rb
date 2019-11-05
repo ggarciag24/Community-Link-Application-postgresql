@@ -19,4 +19,6 @@ class EventsController < ApplicationController
     render json: newEvent
   end
 
+  
+
 end
