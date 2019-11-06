@@ -17,6 +17,7 @@ class EventsController < ApplicationController
     host_id = params['host_id']
 
     newEvent = Event.create({name: name, focus: focus, location: location, date: date, start_time: start_time, end_time: end_time, description: description, host_id: host_id})
+
     render json: newEvent
   end
 
