@@ -14,4 +14,11 @@ class VolunteerEventsController < ApplicationController
     render json: userEventConnection
   end
 
+  def destroy
+    byebug
+    VolunteerEvent.find(params[:id]).destroy
+
+    render json
+  end
+
 end
