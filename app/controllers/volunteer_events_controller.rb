@@ -15,10 +15,9 @@ class VolunteerEventsController < ApplicationController
   end
 
   def destroy
-    byebug
-    VolunteerEvent.find(params[:id]).destroy
+    deleted = VolunteerEvent.find(params[:id]).destroy
 
-    render json
+    render json: deleted
   end
 
 end
