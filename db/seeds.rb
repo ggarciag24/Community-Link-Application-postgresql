@@ -1,8 +1,8 @@
 
 
 User.destroy_all
-user1 = User.find_or_create_by(name: 'user1', bio: 'first user' , image: 'none', password: '123')
-user2 = User.find_or_create_by(name: 'user2', bio: 'second user' , image: 'none', password: '123')
+user1 = User.find_or_create_by(name: 'user1', bio: 'first user' , image: 'https://www.fillmurray.com/250/250', password: '123')
+user2 = User.find_or_create_by(name: 'user2', bio: 'second user' , image: 'https://www.fillmurray.com/200/200', password: '123')
 
 Event.destroy_all
 event1 = Event.find_or_create_by(name: 'trash pick-up', location: 'D.C.', focus:'community clean-up', date: '11/15/2019', start_time: '9:00AM', end_time: '12:00PM', description: 'picking up trash on the road and sidewalks', host_id: user1.id)
