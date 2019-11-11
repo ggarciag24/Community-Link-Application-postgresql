@@ -21,6 +21,19 @@ class EventsController < ApplicationController
     render json: newEvent
   end
 
+  def destroy
+    event = Event.find(params[:id]).destroy
+
+    allConnects = VolunteerEvent.all
+    connects = allConnects.select do |con|
+      con.event_id == params[:id].to_i
+    end
+    connects.each do |con|
+      con.destroy
+    end
+    render json: {event: event, connect: connects}
+  end
+
 
 
 end
